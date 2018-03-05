@@ -60,8 +60,8 @@ CREATE TABLE music_genres(
 CREATE TABLE events(
     e_id INTEGER(10) NOT NULL AUTO_INCREMENT,
     e_name VARCHAR(50) NOT NULL,
-    e_time DATE,
+    e_time DATETIME,
     band_id INTEGER(10) NOT NULL,
     PRIMARY KEY(e_id), 
     FOREIGN KEY(band_id) REFERENCES bands(b_id)
-);    
+); 
