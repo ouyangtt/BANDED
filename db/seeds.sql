@@ -80,7 +80,7 @@ INSERT INTO events(e_name,e_time,band_id) VALUES ("Back from tour open studio", 
 INSERT INTO events(e_name,e_time,band_id) VALUES ("Open practice new material", "2018-04-15 20:00:00", 4);
 INSERT INTO events(e_name,e_time,band_id) VALUES ("Jam session", "2018-04-13 20:00:00", 6);
 INSERT INTO events(e_name,e_time,band_id) VALUES ("Experience a song in the making", "2018-04-02 20:00:00", 7);
-;
+
 
 INSERT INTO soc_media(sm_name, sm_url, b_id) VALUES ("facebook", "https://www.facebook.com/", 10);
 INSERT INTO soc_media(sm_name, sm_url, b_id) VALUES ("twitter", "https://twitter.com/", 5);
