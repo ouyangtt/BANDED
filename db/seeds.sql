@@ -50,13 +50,19 @@ INSERT INTO login(auth_id,is_band,u_id) VALUES ("789af8uasf76dds",0,2);
 INSERT INTO login(auth_id,is_band,u_id) VALUES ("78976ddssf07gfa",1,10);
 INSERT INTO login(auth_id,is_band,u_id) VALUES ("789897f79vc7gfa",0,6);
 
+
+
+INSERT INTO fans(fan_name, email, fan_pic_url, f_locale, b_id) VALUES ("Victor Li", "thebrandnewvictor@gmail.com", "/assets/images/victor.png", 94580, 10);
+INSERT INTO fans(fan_name, email, fan_pic_url, f_locale, b_id) VALUES ("Mark Mikelonis", "thebrandnewvictor@gmail.com", "/assets/images/victor.png", 94580, 7);
+INSERT INTO fans(fan_name, email, fan_pic_url, f_locale, b_id) VALUES ("Adam Kahane", "thebrandnewvictor@gmail.com", "/assets/images/victor.png", 94580, 4);
+INSERT INTO fans(fan_name, email, fan_pic_url, f_locale, b_id) VALUES ("Tung Tung Ouyang", "thebrandnewvictor@gmail.com", "/assets/images/victor.png", 94580, 2);
+
+
 INSERT INTO music_genres(g_id,b_id) VALUES (6,10);
 INSERT INTO music_genres(g_id,b_id) VALUES (7,8);
 INSERT INTO music_genres(g_id,b_id) VALUES (5,1);
 INSERT INTO music_genres(g_id,b_id) VALUES (4,9);
 INSERT INTO music_genres(g_id,b_id) VALUES (1,6);
-
--- these won't work until we have friends in the database
 
 INSERT INTO music_genres(g_id,f_id) VALUES (1,5);
 INSERT INTO music_genres(g_id,f_id) VALUES (5,5);
@@ -73,3 +79,10 @@ INSERT INTO events(e_name,e_time,band_id) VALUES ("Open practice new material", 
 INSERT INTO events(e_name,e_time,band_id) VALUES ("Jam session", "2018-04-13 20:00:00", 6);
 INSERT INTO events(e_name,e_time,band_id) VALUES ("Experience a song in the making", "2018-04-02 20:00:00", 7);
 ;
+
+INSERT INTO soc_media(sm_name, sm_url, b_id) VALUES ("facebook", "https://www.facebook.com/", 10);
+INSERT INTO soc_media(sm_name, sm_url, b_id) VALUES ("twitter", "https://twitter.com/", 5);
+INSERT INTO soc_media(sm_name, sm_url, b_id) VALUES ("instagram", "https://www.instagram.com/", 8);
+INSERT INTO soc_media(sm_name, sm_url, b_id) VALUES ("snapchat", "https://www.snapchat.com/", 3);
+INSERT INTO soc_media(sm_name, sm_url, b_id) VALUES ("youtube", "https://www.youtube.com/", 4);
+
