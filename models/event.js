@@ -13,9 +13,23 @@ module.exports = function(sequelize, DataTypes){
             validate: {
                 notEmpty:true
             }
+        },
+        channel_id: {
+            allowNull: false,
+            type: DataTypes.INTEGER
         }
-
-
-
     }); 
+    Event.associate = function(models){
+        Event.belongsTo(models.Band, {
+            foreignKey: {
+              allowNull: false
+            }
+          });
+        Event.belongsTo(models.Fan, {
+            foreignKey: {
+              allowNull: false
+            }
+        });  
+    }
+    return Event;
 }

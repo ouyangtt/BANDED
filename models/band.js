@@ -35,9 +35,24 @@ module.exports = function(sequelize, DataTypes){
             allowNull: true,
             type: DataTypes.INTEGER,
             validate:{
-                notEmpty:true
-            }
+                notEmpty:true,
+                not: ['[a-z]', 'i']
+            }    
+
         } 
+    });
+
+
+    Band.associate = function(models) {
+        
+        Band.hasMany(models.Fan,{
+            onDelete: "cascade"
+        });
+        Band.hasMany(models.Event,{
+            onDelete: "cascade"
+        });
+        Band.hasMany(models.MusicGenre,{
+            onDelete: "cascade"
     });
     return Band;
 }
