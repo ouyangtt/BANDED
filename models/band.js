@@ -46,13 +46,13 @@ module.exports = function(sequelize, DataTypes){
     Band.associate = function(models) {
         
         Band.hasMany(models.Fan,{
-            onDelete: "cascade"
+             
         });
         Band.hasMany(models.Event,{
-            onDelete: "cascade"
+            
         });
         Band.hasMany(models.MusicGenre,{
-            onDelete: "cascade"
+            
     });
     return Band;
 }
