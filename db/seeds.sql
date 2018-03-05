@@ -1,3 +1,5 @@
+USE banded_db;
+
 INSERT INTO genres(genre_name) VALUES ("Punk Rock");
 INSERT INTO genres(genre_name) VALUES ("Rock");
 INSERT INTO genres(genre_name) VALUES ("Metal");
