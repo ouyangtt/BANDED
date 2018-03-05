@@ -11,6 +11,14 @@ CREATE TABLE bands(
     PRIMARY KEY(b_id)
 );
 
+CREATE TABLE login(
+    id INTEGER(10) NOT NULL AUTO_INCREMENT,
+    auth_id VARCHAR(30) NOT NULL,
+    is_band BOOLEAN DEFAULT false,
+    u_id INTEGER(10) NOT NULL,
+    PRIMARY KEY(id)
+ );
+
 CREATE TABLE soc_media(
     sm_id INTEGER(10) NOT NULL AUTO_INCREMENT,
     sm_name VARCHAR(20) NOT NULL,
