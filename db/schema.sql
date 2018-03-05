@@ -65,3 +65,16 @@ CREATE TABLE events(
     PRIMARY KEY(e_id), 
     FOREIGN KEY(band_id) REFERENCES bands(b_id)
 ); 
+
+CREATE TABLE bands(
+    b_id INTEGER(10) NOT NULL AUTO_INCREMENT,
+    band_name VARCHAR(50) NOT NULL,
+    band_pic_url VARCHAR(200),
+    bio VARCHAR(300),
+    twitter VARCHAR(100),
+    facebook VARCHAR(100),
+    instagram VARCHAR(100),
+    bandcamp VARCHAR(100), 
+    b_locale INTEGER(10) NOT NULL,
+    PRIMARY KEY(b_id)
+);
