@@ -7,9 +7,17 @@ CREATE TABLE bands(
     band_name VARCHAR(50) NOT NULL,
     band_pic_url VARCHAR(200),
     bio VARCHAR(300), 
-    b_locale VARCHAR(200) NOT NULL,
+    b_locale INTEGER(10) NOT NULL,
     PRIMARY KEY(b_id)
 );
+
+CREATE TABLE login(
+    id INTEGER(10) NOT NULL AUTO_INCREMENT,
+    auth_id VARCHAR(30) NOT NULL,
+    is_band BOOLEAN DEFAULT false,
+    u_id INTEGER(10) NOT NULL,
+    PRIMARY KEY(id)
+ );
 
 CREATE TABLE soc_media(
     sm_id INTEGER(10) NOT NULL AUTO_INCREMENT,
@@ -25,7 +33,7 @@ CREATE TABLE fans(
     fan_name VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
     fan_pic_url VARCHAR(200),
-    f_locale VARCHAR(200) NOT NULL,
+    f_locale INTEGER(10) NOT NULL,
     b_id INTEGER(10) NOT NULL,
     PRIMARY KEY(f_id),
     FOREIGN KEY(b_id) REFERENCES bands(b_id)
