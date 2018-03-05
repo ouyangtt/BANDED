@@ -29,5 +29,22 @@ module.exports = function(sequelize, DataTypes){
             }
         } 
     });
+
+    Fan.associate = function(models) {
+        
+        Fan.belongsTo(models.Band, {
+          foreignKey: {
+            allowNull: false
+          }
+        });
+        Fan.belongsTo(models.MusicGenre,{
+            foreignKey:{
+                name: "id",
+                allowNull: false
+            }
+        });
+      };
+    
+    
     return Fan;
 }
