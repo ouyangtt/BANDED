@@ -6,5 +6,10 @@ module.exports = function(sequelize, DataTypes){
         }    
         
     });
+    Genre.belongsTo(models.MusicGenre, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
     return Genre;
 }
