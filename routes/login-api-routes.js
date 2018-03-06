@@ -22,22 +22,22 @@ module.exports = function(app) {
     console.log(req.body);
     db.Login.create({
         auth_id: req.body.auth_id,
-        is_band: req.body.is_band,
-        u_id: req.body.u_id,
+        band_id: req.body.band_id,
+        fan_id: req.body.fan_id,
       })
       .then(function(dbLogin) {
         res.json(dbLogin);
       });
   });
 
-	app.put("/api/login", function(req, res) {
-    db.Login.update(req.body, {
-        where: {
-          auth_id: req.body.auth_id
-        }
-      })
-      .then(function(dbLogin) {
-        res.json(dbLogin);
-      });
-  });
-};
+// 	app.put("/api/login", function(req, res) {
+//     db.Login.update(req.body, {
+//         where: {
+//           auth_id: req.body.auth_id
+//         }
+//       })
+//       .then(function(dbLogin) {
+//         res.json(dbLogin);
+//       });
+//   });
+// };

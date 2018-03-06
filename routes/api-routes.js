@@ -1,5 +1,6 @@
 var db = require("../models");
 
+/// Find all bands and join fans and events
 module.exports = function(app) {
 	app.get("/api/band/", function(req, res) {
     db.Band.findAll({}).then(function(dbBand) {
@@ -7,10 +8,10 @@ module.exports = function(app) {
       });
   });
 
-	app.get("/api/band/:name", function(req, res) {
+	app.get("/api/band/:id", function(req, res) {
     db.Band.findOne({
         where: {
-          name: req.params.name
+          name: req.params.id
         }
       })
       .then(function(dbBand) {
@@ -38,7 +39,7 @@ module.exports = function(app) {
 	app.put("/api/band", function(req, res) {
     db.Band.update(req.body, {
         where: {
-          name: req.body.name
+          id: req.body.id
         }
       })
       .then(function(dbBand) {
