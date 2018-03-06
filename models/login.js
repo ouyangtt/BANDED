@@ -4,12 +4,12 @@ module.exports = function(sequelize, DataTypes){
             allowNull: false,
             type: DataTypes.STRING
         },
-        is_band: {
-            type: Boolean,
-            DEFAULT: false
+        band_id: {
+            allowNull: true,
+            type: DataTypes.INTEGER
         },
-        u_id: {
-            allowNull: false,
+        fan_id: {
+            allowNull: true,
             type: DataTypes.INTEGER
         },
           
