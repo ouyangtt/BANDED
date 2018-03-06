@@ -1,0 +1,14 @@
+
+  <div class="row">
+    <button class="btn" id="loginBtn">Login</button>
+  </div>
+  {{#each login}}
+    {{#if auth_id === googleAuthId}}
+      {{#if is_band}}
+        {{>bandProfile-block}}
+      {{else}}
+        {{>fanProfile-block}}
+      {{/if}}
+    {{/if}}
+  {{/each}}
+</div>
