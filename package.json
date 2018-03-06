@@ -1,5 +1,5 @@
 {
-  "name": "BANDED",
+  "name": "banded",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -28,5 +28,6 @@
     "passport-google-oauth": "^1.0.0",
     "path": "^0.12.7",
     "sequelize": "^4.35.2"
-  }
+  },
+  "devDependencies": {}
 }
