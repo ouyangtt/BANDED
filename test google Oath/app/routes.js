@@ -4,7 +4,7 @@ module.exports = function(app, passport) {
 
     // route for home page
     app.get('/', function(req, res) {
-        res.render('index.ejs'); // load the index.ejs file
+        res.render('index.html'); // load the index.html file
     });
 
     // route for login form
@@ -13,17 +13,17 @@ module.exports = function(app, passport) {
     // route for processing the signup form
 
     // route for showing the profile page
-    app.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile.ejs', {
-            user : req.user // get the user out of session and pass to template
-        });
-    });
+    // app.get('/profile', isLoggedIn, function(req, res) {
+    //     res.render('profile.html', {
+    //         user : req.user // get the user out of session and pass to template
+    //     });
+    // });
 
     // route for logging out
-    app.get('/logout', function(req, res) {
-        req.logout();
-        res.redirect('/');
-    });
+    // app.get('/logout', function(req, res) {
+    //     req.logout();
+    //     res.redirect('/');
+    // });
 
   
     // =====================================
