@@ -2,25 +2,24 @@
 const passport = require('passport')
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
-// load up the user model
-// var User       = require('../app/models/user.js');
+// load up the Login model
+var Login = require('./models/login.js');
 
-// load the auth variables
-// var configAuth = require('./auth');
 
-// module.exports = function(passport) {
 
-    // // used to serialize the user for the session
-    // passport.serializeUser(function(user, done) {
-    //     done(null, user.id);
-    // });
+module.exports = function(passport) {
 
-    // // used to deserialize the user
-    // passport.deserializeUser(function(id, done) {
-    //     User.findById(id, function(err, user) {
-    //         done(err, user);
-    //     });
-    // });
+    // used to serialize the user for the session
+    passport.serializeUser(function(login, done) {
+        done(null, login.id);
+    });
+
+    // used to deserialize the user
+    passport.deserializeLogin(function(id, done) {
+        Login.findById(id, function(err, login) {
+            done(err, login);
+        });
+    });
 
 
 
@@ -39,38 +38,41 @@ var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
         // make the code asynchronous
         // User.findOne won't fire until we have all our data back from Google
-        //process.nextTick(function() {
+        process.nextTick(function() {
 
             // try to find the user based on their google id
-        //     User.findOne({ 'google.id' : profile.id }, function(err, user) {
-        //         if (err)
-        //             return done(err);
+            Login.findOne({ 'auth_id' : profile.id }, function(err, login) {
+                if (err)
+                    return done(err);
 
-        //         if (user) {
+                if (login) {
 
-        //             // if a user is found, log them in
-        //             return done(null, user);
-        //         } else {
-        //             // if the user isnt in our database, create a new user
-        //             var newUser          = new User();
+                    // if a login is found, log them in
+                    return done(null, login);
+                } else {
+                    // if the login isnt in our database, create a new login
+                    var newLogin          = new Login();
 
-        //             // set all of the relevant information
-        //             newUser.google.id    = profile.id;
-        //             newUser.google.token = token;
-        //             newUser.google.name  = profile.displayName;
-        //             newUser.google.email = profile.emails[0].value; // pull the first email
+                    // set all of the relevant information
+                    newLogin.auth_id    = profile.id;
+                    // newLogin.google.token = token;
+                    // newLogin.google.name  = profile.displayName;
+                    // newLogin.google.email = profile.emails[0].value; // pull the first email
 
-        //             // save the user
-        //             newUser.save(function(err) {
-        //                 if (err)
-        //                     throw err;
-        //                 return done(null, newUser);
-        //             });
-        //         }
-        //     });
-        // });
+                    // save the Login
+                    newLogin.save(function(err) {
+                        if (err)
+                            throw err;
+                        return done(null, newLogin);
+                    });
+                }
+            });
+        });
+
         console.log(profile);
         console.log("success");
         done(null, false);
-    }))
+    }));
+
+}
 
