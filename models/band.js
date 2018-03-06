@@ -2,10 +2,13 @@ module.exports = function(sequelize, DataTypes){
     var Band = sequelize.define("Band", {
         name: {
             allowNull: false,
+            type: DataTypes.STRING
+            
+        },
+        email: {
+            allowNull: false,
             type: DataTypes.STRING,
-            validate:{
-                notEmpty:true
-            }
+            
         },
         pic_url: {
             allowNull: true,
@@ -35,7 +38,6 @@ module.exports = function(sequelize, DataTypes){
             allowNull: true,
             type: DataTypes.INTEGER,
             validate:{
-                notEmpty:true,
                 not: ['[a-z]', 'i']
             }    
 

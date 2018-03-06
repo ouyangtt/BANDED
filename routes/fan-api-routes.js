@@ -22,7 +22,7 @@ module.exports = function(app) {
     console.log(req.body);
     db.Fan.create({
         name: req.body.name,
-        email: req.body.email,
+        email: Pull.LOCAL.STORAGE,
         pic_url: req.body.pic_url,
         locale: req.body.locale,
       })

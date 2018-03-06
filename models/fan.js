@@ -10,9 +10,7 @@ module.exports = function(sequelize, DataTypes){
         email: {
             allowNull: false,
             type: DataTypes.STRING,
-            validate:{
-                notEmpty:true
-            }
+            
         },
         pic_url:{
             allowNull: true,

@@ -23,6 +23,7 @@ module.exports = function(app) {
     console.log(req.body);
     db.Band.create({
         name: req.body.name,
+        email: Pull.LOCAL.STORAGE,
         pic_url: req.body.pic_url,
         bio: req.body.bio,
         twitter: req.body.twitter,
