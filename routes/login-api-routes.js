@@ -14,7 +14,11 @@ module.exports = function(app) {
         }
       })
       .then(function(dbLogin) {
+        var hbsObject = {
+          login: dbLogin
+        };
         res.json(dbLogin);
+        res.render("index", hbsObject);
       });
   });
 
