@@ -1,3 +1,4 @@
+
 var db = require("../models");
 
 /// Find all bands and join fans and events
