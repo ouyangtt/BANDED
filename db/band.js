@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes){
     var Band = sequelize.define("Band", {
         auth_id:{
             allowNull: false,
-            type: DataTypes.String
+            type: DataTypes.STRING
         },
         name: {
             allowNull: false,
@@ -52,14 +52,18 @@ module.exports = function(sequelize, DataTypes){
     Band.associate = function(models) {
         
         Band.belongsToMany(models.Fan,{
-             foreignKey: "id"
+            through: "UserFan"
         });
         Band.belongsToMany(models.Event,{
-            foreignKey: "id"
-       });
+            through: { models:
+                "UserEvent"
+            }   
+        });
         Band.belongsToMany(models.Genre,{
-            foreignKey: "id"
-       });
+            through: { models:
+                "UserGenre"
+            }   
+        });
     return Band;
 }
 }

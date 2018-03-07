@@ -18,8 +18,12 @@ module.exports = function(app) {
       })
       .then(function(data) {
         if(data){
-          res.render("/api/band/:auth_id");
-          } else {
+          if(data.band_id !== null){
+            res.render("/api/band/:auth_id");
+          } else{
+            res.render("/api/fan/:auth_id");
+          }
+        } else {
           res.render("createProfile");
         }
           
