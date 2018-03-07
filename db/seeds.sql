@@ -22,25 +22,6 @@ INSERT INTO genres(genre_name) VALUES ("Hardcore");
 INSERT INTO genres(genre_name) VALUES ("Psychedelic Rock");
 INSERT INTO genres(genre_name) VALUES ("Acid Jazz");
 
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("Rival Schools","/assets/images/Ghost.jpg","Rival Schools are a post-hardcore band from New York City.",10001);
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("Ghost","/assets/images/Ghost.jpg","Ghost is a Swedish heavy metal band that was formed in Linköping, Sweden in 2006. ",10001);
-
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("Turbonegro","/assets/images/Ghost.jpg","Turbonegro is a Norwegian punk rock band, initially active from 1989 to 1998, then reformed in 2002. ",94602);
-
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("Hot Snakes","/assets/images/Ghost.jpg","Hot Snakes are an American post-hardcore band led by Rick Froberg and John Reis.",94607);
-
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("Days N' Daze","/assets/images/Ghost.jpg","Days N' Daze is a band from Houston performing a type of folk punk they have called 'H-Town Thrashgrass'",94611);
-
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("Captain We're Sinking","/assets/images/Ghost.jpg","Captain, We're Sinking was an American punk band from Scranton, Pennsylvania. ",94606);
-
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("Cloud Nothings","/assets/images/Ghost.jpg","Cloud Nothings is an American indie rock band from Cleveland, Ohio, founded by singer-songwriter Dylan Baldi.",10001);
-
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("Rocket From The Crypt","/assets/images/Ghost.jpg","Rocket from the Crypt is an American rock band from San Diego, California, originally active from 1989 to 2005.",10001);
-
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("Harley Poe","/assets/images/Ghost.jpg","It's not enough to say Harley Poe write songs about monsters. Harley Poe sing about being monsters.",10001);
-
-INSERT INTO bands(band_name,band_pic_url,bio,b_locale) VALUES ("NoMeansNo","/assets/images/Ghost.jpg","NoMeansNo was a Canadian punk rock band formed in Victoria, British Columbia and later relocated to Vancouver. ",10001);
-
 INSERT INTO login(auth_id,is_band,u_id) VALUES ("789af8uasf07gfa",1,2);
 INSERT INTO login(auth_id,is_band,u_id) VALUES ("789dfguasf07gfa",0,1);
 INSERT INTO login(auth_id,is_band,u_id) VALUES ("789af887dfs7dgf",0,3);
@@ -90,13 +71,13 @@ INSERT INTO soc_media(sm_name, sm_url, b_id) VALUES ("youtube", "https://www.you
 
 
 
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Rival Schools","/assets/images/Ghost.jpg","Rival Schools are a post-hardcore band from New York City.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Ghost","/assets/images/Ghost.jpg","Ghost is a Swedish heavy metal band that was formed in Linköping, Sweden in 2006. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Turbonegro","/assets/images/Ghost.jpg","Turbonegro is a Norwegian punk rock band, initially active from 1989 to 1998, then reformed in 2002. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",94602);
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Hot Snakes","/assets/images/Ghost.jpg","Hot Snakes are an American post-hardcore band led by Rick Froberg and John Reis.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",94607);
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Days N' Daze","/assets/images/Ghost.jpg","Days N' Daze is a band from Houston performing a type of folk punk they have called 'H-Town Thrashgrass'","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",94611);
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Captain We're Sinking","/assets/images/Ghost.jpg","Captain, We're Sinking was an American punk band from Scranton, Pennsylvania. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",94606);
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Cloud Nothings","/assets/images/Ghost.jpg","Cloud Nothings is an American indie rock band from Cleveland, Ohio, founded by singer-songwriter Dylan Baldi.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Rocket From The Crypt","/assets/images/Ghost.jpg","Rocket from the Crypt is an American rock band from San Diego, California, originally active from 1989 to 2005.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Harley Poe","/assets/images/Ghost.jpg","It's not enough to say Harley Poe write songs about monsters. Harley Poe sing about being monsters.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
-INSERT INTO bands(band_name,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("NoMeansNo","/assets/images/Ghost.jpg","NoMeansNo was a Canadian punk rock band formed in Victoria, British Columbia and later relocated to Vancouver. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Rival Schools","thedude@gmail.com","/assets/images/Ghost.jpg","Rival Schools are a post-hardcore band from New York City.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Ghost","thedude@gmail.com","/assets/images/Ghost.jpg","Ghost is a Swedish heavy metal band that was formed in Linköping, Sweden in 2006. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Turbonegro","thedude@gmail.com","/assets/images/Ghost.jpg","Turbonegro is a Norwegian punk rock band, initially active from 1989 to 1998, then reformed in 2002. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",94602);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Hot Snakes","thedude@gmail.com","/assets/images/Ghost.jpg","Hot Snakes are an American post-hardcore band led by Rick Froberg and John Reis.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",94607);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Days N' Daze","thedude@gmail.com","/assets/images/Ghost.jpg","Days N' Daze is a band from Houston performing a type of folk punk they have called 'H-Town Thrashgrass'","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",94611);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Captain We're Sinking","thedude@gmail.com","/assets/images/Ghost.jpg","Captain, We're Sinking was an American punk band from Scranton, Pennsylvania. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",94606);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Cloud Nothings","thedude@gmail.com","/assets/images/Ghost.jpg","Cloud Nothings is an American indie rock band from Cleveland, Ohio, founded by singer-songwriter Dylan Baldi.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Rocket From The Crypt","thedude@gmail.com","/assets/images/Ghost.jpg","Rocket from the Crypt is an American rock band from San Diego, California, originally active from 1989 to 2005.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("Harley Poe","thedude@gmail.com","/assets/images/Ghost.jpg","It's not enough to say Harley Poe write songs about monsters. Harley Poe sing about being monsters.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
+INSERT INTO bands(band_name,email,band_pic_url,bio,twitter,facebook,instagram,bandcamp,b_locale) VALUES ("NoMeansNo","thedude@gmail.com","/assets/images/Ghost.jpg","NoMeansNo was a Canadian punk rock band formed in Victoria, British Columbia and later relocated to Vancouver. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/",10001);
