@@ -10,7 +10,7 @@ module.exports = function(app) {
       });
   });
 
-	app.get("/api/band/:name", function(req, res) {
+	app.get("/api/band/:id", function(req, res) {
     db.Band.findOne({
         where: {
           name: req.params.name
@@ -38,22 +38,28 @@ module.exports = function(app) {
       })
       .then(function(data) {
         var hbsObject = {
-          bands: data
-        };
+
+          band: data
+        }
           res.render("index", hbsObject);
         });
   });
 
-	app.put("/api/band", function(req, res) {
+	app.put("/api/band/:id/:pic_name", function(req, res) {
     db.Band.update(req.body, {
-        where: {
-          name: req.body.name
+        
+          pic_url: "/assets/images/users" + req.params.pic_name,
+          where: {
+          id: req.params.id
+          }
         }
-      })
+      )
       .then(function(data) {
         var hbsObject = {
-          bands: data
-        };
+
+          band: data
+        }
+
           res.render("index", hbsObject);
         });
   });

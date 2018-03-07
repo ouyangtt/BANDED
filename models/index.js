@@ -7,7 +7,7 @@ var basename  = path.basename(__filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
-
+console.log("basename/: "+ basename);
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
@@ -21,6 +21,7 @@ fs
   })
   .forEach(file => {
     var model = sequelize['import'](path.join(__dirname, file));
+    console.log("");
     db[model.name] = model;
   });
 

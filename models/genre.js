@@ -7,10 +7,10 @@ module.exports = function(sequelize, DataTypes){
         
     });
     Genre.belongsToMany(models.Fan, {
-        foreighKey: "id"
+        foreignKey: "id"
     });
     Genre.belongsToMany(models.Band, {
-        foreighKey: "id"
+        foreignKey: "id"
     });
      
     return Genre;

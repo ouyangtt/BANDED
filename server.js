@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var fileUpload = require('express-fileupload');
 
 // Set up express
 var PORT = process.env.PORT || 8000;
