@@ -42,10 +42,11 @@ module.exports = function(app) {
 
 	app.put("/api/fan/:id/:pic_name", function(req, res) {
     db.Fan.update(req.body, {
-        where: {
-          name: req.body.name
-        }
-      })
+      pic_url: "/assets/images/users" + req.params.pic_name,
+      where: {
+      id: req.params.id
+      }
+    })
       .then(function(data) {
         var hbsObject = {
           fan: data

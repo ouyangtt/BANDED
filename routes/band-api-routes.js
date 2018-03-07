@@ -47,7 +47,7 @@ module.exports = function(app) {
 	app.put("/api/band/:id/:pic_name", function(req, res) {
     db.Band.update(req.body, {
         
-          pic_url: "/public/assets/images/users" + req.params.pic_name,
+          pic_url: "/assets/images/users" + req.params.pic_name,
           where: {
           id: req.params.id
           }
