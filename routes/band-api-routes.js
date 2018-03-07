@@ -5,7 +5,7 @@ module.exports = function(app) {
     db.Band.findAll({}).then(function(data) {
       var hbsObject = {
         bands: data
-      }
+      };
         res.render("index", hbsObject);
       });
   });
@@ -19,7 +19,7 @@ module.exports = function(app) {
       .then(function(data) {
         var hbsObject = {
           band: data
-        }
+        };
           res.render("index", hbsObject);
         });
   });
@@ -40,6 +40,7 @@ module.exports = function(app) {
       })
       .then(function(data) {
         var hbsObject = {
+
           band: data
         }
           res.render("index", hbsObject);
@@ -57,13 +58,12 @@ module.exports = function(app) {
       )
       .then(function(data) {
         var hbsObject = {
+
           band: data
         }
+
           res.render("index", hbsObject);
         });
   });
 };
-
-
-
 

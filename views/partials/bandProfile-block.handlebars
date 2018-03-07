@@ -3,6 +3,16 @@
     <div class="row">
       <img href="{{bands.band_pic_url}}">
     </div>
+
+    <form ref='uploadForm' 
+      id='uploadForm' 
+      action='/api/upload/band/:' + {{bands.b_id}} 
+      method='post' 
+      encType="multipart/form-data">
+        <input type="file" name="profileImg" />
+        <input type='submit' value='Upload!' />
+    </form>
+
     <div class="row">
       <p>Location: {{bands.b_locale}}</p>
     </div>
