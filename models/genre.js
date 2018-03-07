@@ -6,10 +6,12 @@ module.exports = function(sequelize, DataTypes){
         }    
         
     });
-    Genre.belongsTo(models.MusicGenre, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
+    Genre.belongsToMany(models.Fan, {
+        foreighKey: "id"
+    });
+    Genre.belongsToMany(models.Band, {
+        foreighKey: "id"
+    });
+     
     return Genre;
 }

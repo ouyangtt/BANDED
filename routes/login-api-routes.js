@@ -2,8 +2,11 @@ var db = require("../models");
 
 module.exports = function(app) {
 	app.get("/api/login/", function(req, res) {
-    db.Login.findAll({}).then(function(dbLogin) {
-        res.json(dbLogin);
+    db.Login.findAll({}).then(function(data) {
+      var hbsObject = {
+        logins: data
+      }
+        res.render("index", hbsObject);
       });
   });
 
@@ -13,35 +16,40 @@ module.exports = function(app) {
           auth_id: req.params.auth_id
         }
       })
-      .then(function(dbLogin) {
+      .then(function(data) {
         var hbsObject = {
-          login: dbLogin
-        };
-        res.json(dbLogin);
-        res.render("index", hbsObject);
-      });
+          login: data
+        }
+          res.render("index", hbsObject);
+        });
   });
 
 	app.post("/api/login", function(req, res) {
     console.log(req.body);
     db.Login.create({
         auth_id: req.body.auth_id,
-        band_id: req.body.band_id,
-        fan_id: req.body.fan_id,
+        is_band: req.body.is_band,
+        u_id: req.body.u_id,
       })
-      .then(function(dbLogin) {
-        res.json(dbLogin);
+      .then(function(data) {
+        var hbsObject = {
+          login: data
+        }
+          res.render("index", hbsObject);
       });
   });
 
-// 	app.put("/api/login", function(req, res) {
-//     db.Login.update(req.body, {
-//         where: {
-//           auth_id: req.body.auth_id
-//         }
-//       })
-//       .then(function(dbLogin) {
-//         res.json(dbLogin);
-//       });
-//   });
-// };
+	app.put("/api/login", function(req, res) {
+    db.Login.update(req.body, {
+        where: {
+          auth_id: req.body.auth_id
+        }
+      })
+      .then(function(data) {
+        var hbsObject = {
+          login: data
+        }
+          res.render("index", hbsObject);
+        });
+  });
+};
