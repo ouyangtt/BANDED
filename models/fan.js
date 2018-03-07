@@ -33,7 +33,7 @@ module.exports = function(sequelize, DataTypes){
         Fan.belongsToMany(models.Band, {
             foreighKey: "id"
        });
-        Fan.belongsToMany(models.MusicGenre,{
+        Fan.belongsToMany(models.Genre,{
             foreighKey: "id"
        });
       };
