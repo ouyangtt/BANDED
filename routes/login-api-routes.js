@@ -6,7 +6,7 @@ module.exports = function(app) {
       var hbsObject = {
         logins: data
       }
-        res.render("index", hbsObject);
+        res.render("login", hbsObject);
       });
   });
 
@@ -20,7 +20,7 @@ module.exports = function(app) {
         var hbsObject = {
           login: data
         }
-          res.render("index", hbsObject);
+          res.render("login", hbsObject);
         });
   });
 
@@ -49,7 +49,7 @@ module.exports = function(app) {
         var hbsObject = {
           login: data
         }
-          res.render("index", hbsObject);
+          res.render("login", hbsObject);
         });
   });
 };
