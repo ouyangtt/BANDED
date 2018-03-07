@@ -27,6 +27,7 @@ module.exports = function(app) {
 	app.post("/api/fan", function(req, res) {
     console.log(req.body);
     db.Fan.create({
+        auth_id: req.body.authi_id,
         name: req.body.name,
         email: localStorage.email,
         pic_url: req.body.pic_url,

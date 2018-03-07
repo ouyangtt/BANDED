@@ -5,9 +5,12 @@ var path      = require('path');
 var Sequelize = require('sequelize');
 var basename  = path.basename(__filename);
 var env       = process.env.NODE_ENV || 'development';
-var config    = require(__dirname + '/../config/config.json')[env];
+var configPath = '\\config\\config.json';
+var newPath = path.join( configPath, '\.\.');
+console.log("newPath: " + configPath);
+var config    = require(__dirname + '\\..\\config\\config.json')[env];
 var db        = {};
-console.log("basename/: "+ basename);
+console.log("route/: "+ __dirname + '\\..\\config\\config.json');
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
@@ -35,3 +38,7 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
+
+// string path = @"C:\Folder1\Folder2\Folder3\Folder4";
+// string newPath = Path.GetFullPath(Path.Combine(path, @"..\..\"));
