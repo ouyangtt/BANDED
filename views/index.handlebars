@@ -1,10 +1,6 @@
 
-{{#each login}}
-  {{#if auth_id === googleAuthId}}
-    {{#if is_band}}
-      {{>bandProfile-block}}
-    {{else}}
-      {{>fanProfile-block}}
-    {{/if}}
+  {{#if band_id}}
+    {{>bandProfile-block}}
+  {{else}}
+    {{>fanProfile-block}}
   {{/if}}
-{{/each}}
