@@ -47,15 +47,15 @@ module.exports = function(sequelize, DataTypes){
 
     Band.associate = function(models) {
         
-        Band.hasMany(models.Fan,{
-             
+        Band.belongsToMany(models.Fan,{
+             foreighKey: "id"
         });
-        Band.hasMany(models.Event,{
-            
-        });
-        Band.hasMany(models.MusicGenre,{
-            
-    });
+        Band.belongsToMany(models.Event,{
+            foreighKey: "id"
+       });
+        Band.belongsToMany(models.MusicGenre,{
+            foreighKey: "id"
+       });
     return Band;
 }
 }

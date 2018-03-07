@@ -2,8 +2,11 @@ var db = require("../models");
 // Join with band  events and genre taables
 module.exports = function(app) {
 	app.get("/api/fan/", function(req, res) {
-    db.Fan.findAll({}).then(function(dbFan) {
-        res.json(dbFan);
+    db.Fan.findAll({}).then(function(data) {
+      var hbsObject = {
+        fans: data
+      }
+        res.render("index", hbsObject);
       });
   });
 
@@ -13,8 +16,11 @@ module.exports = function(app) {
           id: req.params.id
         }
       })
-      .then(function(dbFan) {
-        res.json(dbFan);
+      .then(function(data) {
+        var hbsObject = {
+          fan: data
+        }
+        res.render("index", hbsObject);
       });
   });
 
@@ -26,8 +32,11 @@ module.exports = function(app) {
         pic_url: req.body.pic_url,
         locale: req.body.locale,
       })
-      .then(function(dbFan) {
-        res.json(dbFan);
+      .then(function(data) {
+        var hbsObject = {
+          fan: data
+        }
+        res.render("index", hbsObject);
       });
   });
 
@@ -37,8 +46,11 @@ module.exports = function(app) {
           name: req.body.name
         }
       })
-      .then(function(dbFan) {
-        res.json(dbFan);
+      .then(function(data) {
+        var hbsObject = {
+          fan: data
+        }
+        res.render("index", hbsObject);
       });
   });
 
@@ -48,8 +60,8 @@ module.exports = function(app) {
           id: req.params.id
         }
       })
-      .then(function(dbFan) {
-        res.json(dbFan);
+      .then(function(data) {
+        window.location.replace("/");
       });
   });
 };
