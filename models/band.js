@@ -1,5 +1,9 @@
 module.exports = function(sequelize, DataTypes){
     var Band = sequelize.define("Band", {
+        auth_id:{
+            allowNull: false,
+            type: DataTypes.String
+        },
         name: {
             allowNull: false,
             type: DataTypes.STRING
@@ -35,7 +39,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
         }, 
         locale: {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.INTEGER,
             validate:{
                 not: ['[a-z]', 'i']
