@@ -24,7 +24,7 @@ module.exports = function(app) {
         });
   });
 
-	app.post("/api/band", function(req, res) {
+	app.post("/api/band/:email", function(req, res) {
     console.log(req.body);
     db.Band.create({
         name: req.body.name,
@@ -36,6 +36,7 @@ module.exports = function(app) {
         bandcamp: req.body.bandcamp,
         locale: req.body.locale,
       })
+
       .then(function(data) {
         var hbsObject = {
           bands: data
@@ -43,6 +44,8 @@ module.exports = function(app) {
           res.render("index", hbsObject);
         });
   });
+
+
 
 	app.put("/api/band", function(req, res) {
     db.Band.update(req.body, {
