@@ -48,13 +48,13 @@ module.exports = function(sequelize, DataTypes){
     Band.associate = function(models) {
         
         Band.belongsToMany(models.Fan,{
-             foreighKey: "id"
+             foreignKey: "id"
         });
         Band.belongsToMany(models.Event,{
-            foreighKey: "id"
+            foreignKey: "id"
        });
         Band.belongsToMany(models.Genre,{
-            foreighKey: "id"
+            foreignKey: "id"
        });
     return Band;
 }

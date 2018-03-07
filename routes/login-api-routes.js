@@ -32,10 +32,7 @@ module.exports = function(app) {
         u_id: req.body.u_id,
       })
       .then(function(data) {
-        var hbsObject = {
-          login: data
-        }
-          res.render("index", hbsObject);
+        res.render("createProfile");
       });
   });
 

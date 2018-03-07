@@ -21,10 +21,10 @@ module.exports = function(sequelize, DataTypes){
     }); 
     Event.associate = function(models){
         Event.belongsToMany(models.Band, {
-            foreighKey: "id"
+            foreignKey: "id"
         });
         Event.belongsToMany(models.Fan, {
-            foreighKey: "id"
+            foreignKey: "id"
        });
     }
     return Event;

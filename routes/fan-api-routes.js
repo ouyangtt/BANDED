@@ -1,5 +1,5 @@
 var db = require("../models");
-// Join with band  events and genre taables
+// Join with band  events and genre tables
 module.exports = function(app) {
 	app.get("/api/fan/", function(req, res) {
     db.Fan.findAll({}).then(function(data) {
@@ -40,7 +40,7 @@ module.exports = function(app) {
       });
   });
 
-	app.put("/api/fan", function(req, res) {
+	app.put("/api/fan/:id/:pic_name", function(req, res) {
     db.Fan.update(req.body, {
         where: {
           name: req.body.name

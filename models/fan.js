@@ -31,10 +31,10 @@ module.exports = function(sequelize, DataTypes){
     Fan.associate = function(models) {
         
         Fan.belongsToMany(models.Band, {
-            foreighKey: "id"
+            foreignKey: "id"
        });
         Fan.belongsToMany(models.Genre,{
-            foreighKey: "id"
+            foreignKey: "id"
        });
       };
     

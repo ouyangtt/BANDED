@@ -1,4 +1,4 @@
-app.use(fileUpload());
+app.use(fileUpload({limits: { fileSize: 50 * 1024 * 1024, abortOnLimit:true },}));
  
 app.post('/api/upload/band/:id', function(req, res) {
   if (!req.files)
