@@ -20,16 +20,12 @@ module.exports = function(sequelize, DataTypes){
         }
     }); 
     Event.associate = function(models){
-        Event.belongsTo(models.Band, {
-            foreignKey: {
-              allowNull: false
-            }
-          });
-        Event.belongsTo(models.Fan, {
-            foreignKey: {
-              allowNull: false
-            }
-        });  
+        Event.belongsToMany(models.Band, {
+            foreighKey: "id"
+        });
+        Event.belongsToMany(models.Fan, {
+            foreighKey: "id"
+       });
     }
     return Event;
 }

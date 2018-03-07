@@ -2,10 +2,13 @@ module.exports = function(sequelize, DataTypes){
     var Band = sequelize.define("Band", {
         name: {
             allowNull: false,
+            type: DataTypes.STRING
+            
+        },
+        email: {
+            allowNull: false,
             type: DataTypes.STRING,
-            validate:{
-                notEmpty:true
-            }
+            
         },
         pic_url: {
             allowNull: true,
@@ -35,7 +38,6 @@ module.exports = function(sequelize, DataTypes){
             allowNull: true,
             type: DataTypes.INTEGER,
             validate:{
-                notEmpty:true,
                 not: ['[a-z]', 'i']
             }    
 
@@ -45,16 +47,16 @@ module.exports = function(sequelize, DataTypes){
 
     Band.associate = function(models) {
         
-        Band.hasMany(models.Fan,{
-             
+        Band.belongsToMany(models.Fan,{
+             foreighKey: "id"
         });
-        Band.hasMany(models.Event,{
-            
-        });
-        Band.hasMany(models.MusicGenre,{
-            
-    });
+        Band.belongsToMany(models.Event,{
+            foreighKey: "id"
+       });
+        Band.belongsToMany(models.Genre,{
+            foreighKey: "id"
+       });
     return Band;
 }
-
+}
  

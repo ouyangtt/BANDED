@@ -10,9 +10,7 @@ module.exports = function(sequelize, DataTypes){
         email: {
             allowNull: false,
             type: DataTypes.STRING,
-            validate:{
-                notEmpty:true
-            }
+            
         },
         pic_url:{
             allowNull: true,
@@ -32,16 +30,12 @@ module.exports = function(sequelize, DataTypes){
 
     Fan.associate = function(models) {
         
-        Fan.belongsTo(models.Band, {
-          foreignKey: {
-            allowNull: false
-          }
-        });
-        Fan.belongsTo(models.MusicGenre,{
-            foreignKey:{
-                allowNull: false
-            }
-        });
+        Fan.belongsToMany(models.Band, {
+            foreighKey: "id"
+       });
+        Fan.belongsToMany(models.Genre,{
+            foreighKey: "id"
+       });
       };
     
     
