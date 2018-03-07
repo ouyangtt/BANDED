@@ -40,7 +40,7 @@ module.exports = function(app) {
       })
       .then(function(data) {
         if(data){
-          location.redirect("api/login/:" + data.auth_id);
+          window.location.redirect("api/login/:" + data.auth_id);
         }
         var hbsObject = {
 
