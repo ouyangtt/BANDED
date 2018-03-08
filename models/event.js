@@ -19,17 +19,15 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.INTEGER
         }
     }); 
+
+
     Event.associate = function(models){
-        Event.belongsToMany(models.Band,{
-            through: { models:
-                "UserEvent"
-            }   
-        });
-        Event.belongsToMany(models.Fan,{
-            through: { 
-                "FanEvent"
-            }   
-        });
+        // Event.belongsToMany(models.Band,{
+        //     through: { model: models.Band }   
+        // });
+        // Event.belongsToMany(models.Fan,{
+        //     through: { model: models.Fan}   
+        // });
     }
     return Event;
 }
