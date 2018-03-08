@@ -6,12 +6,19 @@ module.exports = function(sequelize, DataTypes){
         }    
         
     });
-    Genre.belongsToMany(models.Fan, {
-        foreignKey: "id"
-    });
-    Genre.belongsToMany(models.Band, {
-        foreignKey: "id"
-    });
+    Genre.associate = function(models){
+        Genre.belongsToMany(models.Fan, {
+            through: { models:
+                "UserGenre"
+            }    
+        });
+        Genre.belongsToMany(models.Band, {
+            through: { models:
+            'UserGenre'
+        }   
+     });
+    }
+   
      
     return Genre;
 }

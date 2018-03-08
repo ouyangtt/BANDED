@@ -39,10 +39,14 @@ module.exports = function(app) {
         locale: req.body.locale,
       })
       .then(function(data) {
+        if(data){
+          window.location.redirect("api/login/:" + data.auth_id);
+        }
         var hbsObject = {
 
           band: data
         }
+        
           res.render("index", hbsObject);
         });
   });
