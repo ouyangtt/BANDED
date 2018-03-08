@@ -27,6 +27,8 @@ module.exports = function(app) {
 	app.post("/api/band", function(req, res) {
     console.log(req.body);
     db.Band.create({
+        auth_id: req.body.auth_id,
+        email: req.body.email, 
         name: req.body.name,
         pic_url: req.body.pic_url,
         bio: req.body.bio,
