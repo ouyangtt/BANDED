@@ -1,23 +1,13 @@
 {
   "development": {
     "username": "root",
-    "password": "rUWKttvA#VIuowOTbqbOUp*H8vEYRwp9I",
+    "password": "",
     "database": "banded_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "test": {
-    "username": "root",
-    "password": "rUWKttvA#VIuowOTbqbOUp*H8vEYRwp9I",
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
