@@ -68,12 +68,21 @@ module.exports = function(app) {
 
  // Each of the below routes just handles the HTML page that the user gets sent to.
 
-app.get('/auth/google', passport.authenticate('google', { scope : ['profile','email','youtube','calendar']  }));
+// passport.use(new GoogleStrategy({}, passport.serializeUser(function(user, done){})
+
+// passport.deserializeUser(function(id, done) { })
+
+// function(token, refreshToken, profile, done) { })
+
+
+require('../public/assets/js/passport.js')(passport);
+
+app.get('/auth/google', passport.authenticate('google', { scope : ['profile','email']  }));
 
     // the callback after google has authenticated the user
 app.get( '/auth/google/callback', 
-    passport.authenticate( 'google', { 
-        successRedirect: '/',
-        failureRedirect: '/api/login/:' + passport.profile
+    passport.authenticate( 'remote_user', { 
+        successRedirect: '/api/login',
+        failureRedirect: '/api/login/:' + this.id
 }));
 };
