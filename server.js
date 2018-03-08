@@ -29,10 +29,14 @@ app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 // Import routes for the server to access
-// var routes = require("./routes");
+require("./routes/band-api-routes.js")(app);
+require("./routes/fan-api-routes.js")(app);
+require("./routes/login-api-routes.js")(app);
+require("./routes/upload-api-routes.js")(app);
+
 
 // Sync sequelize models and start Express app
-db.sequelize.sync({force:true}).then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
