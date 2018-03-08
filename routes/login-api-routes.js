@@ -15,6 +15,11 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/", function(req, res) {
+    
+        res.render("login");
+      });
+
 	app.get("/api/login/:auth_id", function(req, res) {
     db.Login.findOne({
         where: {

@@ -6,14 +6,14 @@ module.exports = function(sequelize, DataTypes){
         }    
         
     });
-    // Genre.associate = function(models){
-    //     Genre.belongsToMany(models.Fan, {
-    //         through: { models: models.Fan}    
-    //     });
-    //     Genre.belongsToMany(models.Band, {
-    //         through: { models: models.Band}   
-    //      });
-    // }
+    Genre.associate = function(models){
+        Genre.belongsToMany(models.Fan, {
+            through: "FanGenre"    
+        });
+        Genre.belongsToMany(models.Band, {
+            through: "BandGenre"  
+         });
+    }
    
      
     return Genre;
