@@ -74,7 +74,7 @@ module.exports = function(app) {
 
 // function(token, refreshToken, profile, done) { })
 
-
+var loc_id;
 require('../public/assets/js/passport.js')(passport);
 
 app.get('/auth/google', passport.authenticate('google', { scope : ['profile','email']  }));
@@ -82,7 +82,10 @@ app.get('/auth/google', passport.authenticate('google', { scope : ['profile','em
     // the callback after google has authenticated the user
 app.get( '/auth/google/callback', 
     passport.authenticate( 'remote_user', { 
+        
         successRedirect: '/api/login',
-        failureRedirect: '/api/login/:' + this.id
+        failureRedirect: '/api/login/:code' 
+        
 }));
+console.log("profile: " + passport.profile);
 };
