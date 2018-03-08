@@ -29,7 +29,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 // Import routes for the server to access
-var routes = require("./routes");
+// var routes = require("./routes");
 
 // Sync sequelize models and start Express app
 db.sequelize.sync({force:true}).then(function() {
@@ -38,4 +38,4 @@ db.sequelize.sync({force:true}).then(function() {
   });
 });
 
- app.use("/", routes);
+//  app.use("/", routes);
