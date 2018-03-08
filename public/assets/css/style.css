@@ -1,14 +1,22 @@
-/*
- #logo {
-     text-align: center;
- }*/
 
- .body {
+ 
+#logo {
+	margin-top:50px;
+	margin-bottom:30px;
+}
+ body {
  	background-color: black;
-    color:blue;
+ 	color:blue;
 
  }
 
-.footer {
+footer {
 	text-align: center;
+	color:white;
+	margin-bottom: 50px;
 }
+
+.container {
+	height:800px;
+}
+
