@@ -1,6 +1,11 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var fileUpload = require('express-fileupload');
+// setup passport
+var passport = require('passport');
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+require('./passport');
+var fileUpload = require('express-fileupload');
 
 // Set up express
 var PORT = process.env.PORT || 8000;
@@ -24,7 +29,10 @@ app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 // Import routes for the server to access
-var routes = require("./routes/api-routes.js");
+var routes = require("./routes/band-api-routes.js");
+var routes = require("./routes/fan-api-routes.js");
+var routes = require("./routes/login-api-routes.js");
+var routes = require("./routes/upload-api-routes.js");
 
 // Sync sequelize models and start Express app
 db.sequelize.sync({force:true}).then(function() {

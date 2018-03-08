@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
     var Band = sequelize.define("Band", {
-        auth_id:{
+        auth_id: {
             allowNull: false,
             type: DataTypes.STRING
         },
@@ -52,17 +52,13 @@ module.exports = function(sequelize, DataTypes){
     Band.associate = function(models) {
         
         Band.belongsToMany(models.Fan,{
-            through: "UserFan"
+            through:{model: models.Fan}
         });
         Band.belongsToMany(models.Event,{
-            through: { models:
-                "UserEvent"
-            }   
+            through:{model: models.Event}
         });
         Band.belongsToMany(models.Genre,{
-            through: { models:
-                "UserGenre"
-            }   
+            through:{model: models.Genre}
         });
     return Band;
 }

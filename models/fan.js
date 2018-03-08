@@ -28,22 +28,19 @@ module.exports = function(sequelize, DataTypes){
         } 
     });
 
+ 
+
+
     Fan.associate = function(models) {
         
-        Fan.belongsToMany(models.Band, {
-            through: { models:
-                "UserBand"
-            }   
-        });
+        // Fan.belongsToMany(models.Band, {
+        //     through: { model: models.Bands }   
+        // });
         Fan.belongsToMany(models.Genre, {
-            through: { models:
-                "UserGenre"
-            }   
+            through: { model: models.Fan }   
         });
         Fan.belongsToMany(models.Event, {
-            through: { models:
-                "FanEvent"
-            }   
+            through: { model: models.Fan }   
         });
         };
     
