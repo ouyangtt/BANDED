@@ -1,8 +1,10 @@
 {
-  "name": "banded",
+  "name": "BANDED",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "passport.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -17,17 +19,5 @@
   "bugs": {
     "url": "https://github.com/ouyangtt/BANDED/issues"
   },
-  "homepage": "https://github.com/ouyangtt/BANDED#readme",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "fs": "0.0.1-security",
-    "mysql2": "^1.5.2",
-    "npm": "^5.7.1",
-    "passport": "^0.4.0",
-    "passport-google-oauth": "^1.0.0",
-    "path": "^0.12.7",
-    "sequelize": "^4.35.2"
-  },
-  "devDependencies": {}
+  "homepage": "https://github.com/ouyangtt/BANDED#readme"
 }

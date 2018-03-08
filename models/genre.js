@@ -6,10 +6,19 @@ module.exports = function(sequelize, DataTypes){
         }    
         
     });
-    Genre.belongsTo(models.MusicGenre, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
+    Genre.associate = function(models){
+        Genre.belongsToMany(models.Fan, {
+            through: { models:
+                "UserGenre"
+            }    
+        });
+        Genre.belongsToMany(models.Band, {
+            through: { models:
+            'UserGenre'
+        }   
+     });
+    }
+   
+     
     return Genre;
 }

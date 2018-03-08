@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 require('./passport');
+var fileUpload = require('express-fileupload');
 
 // Set up express
 var PORT = process.env.PORT || 8080;

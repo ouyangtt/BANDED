@@ -44,6 +44,7 @@ typings/
 
 # Optional npm cache directory
 .npm
+.vscode/launch.json
 
 # Optional eslint cache
 .eslintcache

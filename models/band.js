@@ -1,11 +1,18 @@
 module.exports = function(sequelize, DataTypes){
     var Band = sequelize.define("Band", {
+        auth_id:{
+            allowNull: false,
+            type: DataTypes.STRING
+        },
         name: {
             allowNull: false,
+            type: DataTypes.STRING
+            
+        },
+        email: {
+            allowNull: false,
             type: DataTypes.STRING,
-            validate:{
-                notEmpty:true
-            }
+            
         },
         pic_url: {
             allowNull: true,
@@ -32,10 +39,9 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
         }, 
         locale: {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.INTEGER,
             validate:{
-                notEmpty:true,
                 not: ['[a-z]', 'i']
             }    
 
@@ -45,17 +51,21 @@ module.exports = function(sequelize, DataTypes){
 
     Band.associate = function(models) {
         
-        Band.hasMany(models.Fan,{
-             
+        Band.belongsToMany(models.Fan,{
+            through: "UserFan"
         });
-        Band.hasMany(models.Event,{
-            
+        Band.belongsToMany(models.Event,{
+            through: { models:
+                "UserEvent"
+            }   
         });
-        Band.hasMany(models.MusicGenre,{
-            
-    });
+        Band.belongsToMany(models.Genre,{
+            through: { models:
+                "UserGenre"
+            }   
+        });
     return Band;
 };
 }
-
+}
  
