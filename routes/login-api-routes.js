@@ -17,14 +17,20 @@ module.exports = function(app) {
         }
       })
       .then(function(data) {
-        var hbsObject = {
-          login: data
+        if(data){
+          if(data.band_id !== null){
+            res.render("/api/band/:auth_id");
+          } else{
+            res.render("/api/fan/:auth_id");
+          }
+        } else {
+          res.render("createProfile");
         }
-          res.render("login", hbsObject);
+          
         });
   });
 
-	app.post("/api/login", function(req, res) {
+	app.post("/api/login/:auth_id", function(req, res) {
     console.log(req.body);
     db.Login.create({
         auth_id: req.body.auth_id,

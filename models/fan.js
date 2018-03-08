@@ -31,12 +31,21 @@ module.exports = function(sequelize, DataTypes){
     Fan.associate = function(models) {
         
         Fan.belongsToMany(models.Band, {
-            foreignKey: "id"
-       });
-        Fan.belongsToMany(models.Genre,{
-            foreignKey: "id"
-       });
-      };
+            through: { models:
+                "UserBand"
+            }   
+        });
+        Fan.belongsToMany(models.Genre, {
+            through: { models:
+                "UserGenre"
+            }   
+        });
+        Fan.belongsToMany(models.Event, {
+            through: { models:
+                "FanEvent"
+            }   
+        });
+        };
     
     
     return Fan;

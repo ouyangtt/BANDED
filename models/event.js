@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes){
         },
         time: {
             allowNull: false,
-            type: DataTypes.DATETIME,
+            type: DataTypes.STRING,
             validate: {
                 notEmpty:true
             }
@@ -20,12 +20,16 @@ module.exports = function(sequelize, DataTypes){
         }
     }); 
     Event.associate = function(models){
-        Event.belongsToMany(models.Band, {
-            foreignKey: "id"
+        Event.belongsToMany(models.Band,{
+            through: { models:
+                "UserEvent"
+            }   
         });
-        Event.belongsToMany(models.Fan, {
-            foreignKey: "id"
-       });
+        Event.belongsToMany(models.Fan,{
+            through: { 
+                "FanEvent"
+            }   
+        });
     }
     return Event;
 }
