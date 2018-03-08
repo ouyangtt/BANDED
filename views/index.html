@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+            <!-- Google sign in button -->
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
         <script src="https://apis.google.com/js/api.js"></script>
-        <script>
+<!--         must include the Google Platform Library on your web pages that integrate Google Sign-In. -->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="823260742909-vlev75slnqh68p4j5gka78duj5u4gie6.apps.googleusercontent.com">
+
+       <!--  <script>
           function start() {
             // Initializes the client with the API key and the Translate API.
             gapi.client.init({
@@ -25,9 +32,14 @@
     
           // Loads the JavaScript client library and invokes `start` afterwards.
           gapi.load('client', start);
-        </script>
+        </script> -->
       </head>
       <body>
+
+
+              <script src="config.js"></script>
+
+
         <div id="results"></div>
       </body>
 </html>
