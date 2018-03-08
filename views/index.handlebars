@@ -1,6 +1,10 @@
 
-  {{#if band_id}}
+  {{#if band }}
+ 
     {{>bandProfile-block}}
-  {{else}}
+ 
+  {{else if bands}}
+    {{>bandProfile-block}}
+  {{else}}  
     {{>fanProfile-block}}
   {{/if}}
