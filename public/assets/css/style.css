@@ -1,3 +1,14 @@
-.footer{
-	color:blue;
+/*
+ #logo {
+     text-align: center;
+ }*/
+
+ .body {
+ 	background-color: black;
+    color:blue;
+
+ }
+
+.footer {
+	text-align: center;
 }
