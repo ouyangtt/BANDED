@@ -1,4 +1,4 @@
-var passport = require("passport.js");
+// var passport = require("passport.js");
 
 $(document).ready(function() {
 
