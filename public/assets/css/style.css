@@ -1,3 +1,27 @@
-.footer{
-	color:blue;
+
+ 
+#logo {
+	margin-top:50px;
+	margin-bottom:30px;
 }
+ body {
+ 	background-color: black;
+ 	color:blue;
+ 	
+ }
+
+footer {
+	text-align: center;
+	color:white;
+	
+	position: relative;
+	padding: 1rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.container {
+	
+}
+
