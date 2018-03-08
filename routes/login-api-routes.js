@@ -15,6 +15,11 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/", function(req, res) {
+    
+        res.render("login");
+      });
+
 	app.get("/api/login/:auth_id", function(req, res) {
     db.Login.findOne({
         where: {
@@ -69,6 +74,6 @@ app.get('/auth/google', passport.authenticate('google', { scope : ['profile','em
 app.get( '/auth/google/callback', 
     passport.authenticate( 'google', { 
         successRedirect: '/',
-        failureRedirect: '/api/login/:' + passport.profile.id
+        failureRedirect: '/api/login/:' + passport.profile
 }));
 };

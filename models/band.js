@@ -52,15 +52,16 @@ module.exports = function(sequelize, DataTypes){
     Band.associate = function(models) {
         
         Band.belongsToMany(models.Fan,{
-            through:{model: models.Fan}
+            through: "BandFan"
         });
         Band.belongsToMany(models.Event,{
-            through:{model: models.Event}
+            through: "BandEvent"
         });
         Band.belongsToMany(models.Genre,{
-            through:{model: models.Genre}
+            through:"BandGenre"
         });
+    }    
     return Band;
-}
+
 }
  

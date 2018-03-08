@@ -22,12 +22,12 @@ module.exports = function(sequelize, DataTypes){
 
 
     Event.associate = function(models){
-        // Event.belongsToMany(models.Band,{
-        //     through: { model: models.Band }   
-        // });
-        // Event.belongsToMany(models.Fan,{
-        //     through: { model: models.Fan}   
-        // });
+        Event.belongsToMany(models.Band,{
+            through: "BandEvents"   
+        });
+        Event.belongsToMany(models.Fan,{
+            through: "FanEvents" 
+        });
     }
     return Event;
 }
