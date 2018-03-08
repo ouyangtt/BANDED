@@ -33,9 +33,9 @@ module.exports = function(sequelize, DataTypes){
 
     Fan.associate = function(models) {
         
-        Fan.belongsToMany(models.Band, {
-            through: { model: models.Bands }   
-        });
+        // Fan.belongsToMany(models.Band, {
+        //     through: { model: models.Bands }   
+        // });
         Fan.belongsToMany(models.Genre, {
             through: { model: models.Fan }   
         });

@@ -36,6 +36,3 @@ db.Sequelize = Sequelize;
 
 module.exports = db;
 
-
-// string path = @"C:\Folder1\Folder2\Folder3\Folder4";
-// string newPath = Path.GetFullPath(Path.Combine(path, @"..\..\"));
