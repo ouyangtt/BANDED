@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "iamR00t",
+=======
+    "password": "",
+>>>>>>> eaed9dd8b8d201e2a0f10f58ed1fe754cb11d755
     "database": "banded_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
