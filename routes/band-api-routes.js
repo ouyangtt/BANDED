@@ -33,7 +33,7 @@ module.exports = function(app) {
         auth_id: req.body.auth_id,
         email: req.body.email, 
         name: req.body.name,
-        pic_url: "/assets/images/Ghost.jpg",
+        pic_url: "/assets/images/users/Ghost.jpg",
         bio: req.body.bio,
         twitter: req.body.twitter,
         facebook: req.body.facebook,
@@ -44,7 +44,7 @@ module.exports = function(app) {
       .then(function(data) {
         console.log("data: "+ data)
         if(data){
-          window.location.redirect("api/login/:" + data.auth_id);
+          location.replace("api/login/:" + data.auth_id);
         }
         var hbsObject = {
 
