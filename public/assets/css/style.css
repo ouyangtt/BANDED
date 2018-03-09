@@ -1,19 +1,18 @@
-
- 
 #logo {
-	margin-top:50px;
+	margin-top:30px;
 	margin-bottom:30px;
 }
+
  body {
  	background-color: black;
  	color:rgb(240, 240, 247);
- 	
+ 	height: 100%;
+ 	margin: 0;
  }
 
 footer {
 	text-align: center;
 	color:white;
-	
 	position: relative;
 	padding: 1rem;
 	right: 0;
@@ -22,10 +21,30 @@ footer {
 }
 
 .container {
-	
+	text-align: center;
+	min-height: 100%;
 }
+
+form {
+	background-color: gray;
+}
+
+label {
+	padding: 5px;
+}
+
+.form-group {
+	padding: 5px;
+}
+
 
 .profImg {
 	width: 300px;
 	height: 225px;
 }
+
+
+h1 {
+	margin-bottom: 50px;
+}
+
