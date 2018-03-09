@@ -15,7 +15,7 @@ module.exports = function(passport) {
   passport.use(new GoogleStrategy({
     clientID: "326433976152-kqhp9718ameli659tkp250657m3m0bri.apps.googleusercontent.com",
     clientSecret: "cuEQIFtvGdGmP18CQxWsx0bu",
-    callbackURL: "http://localhost:8000/api/login/:"
+    callbackURL: "http://localhost:8000/api/band/9"
   },
   
 
