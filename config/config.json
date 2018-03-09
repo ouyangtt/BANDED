@@ -5,6 +5,10 @@
     "password": "",
 
     "database": "banded_db",
+
+   "password": null,
+   "database": "banded_db",
+
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

@@ -81,10 +81,10 @@ module.exports = function(app) {
 /////////////////////////////////////////////////
 
 
-var loc_id;
+// var loc_id;
 require('../public/assets/js/passport.js')(passport);
 
-app.get('/auth/google', passport.authenticate('google', { scope : ['https://www.googleapis.com/auth/plus.login','email']  }));
+app.get('/auth/google', passport.authenticate('google', { scope : ['profile','email']  }));
 
     // the callback after google has authenticated the user
 app.get( '/auth/google/callback', 
@@ -94,22 +94,5 @@ app.get( '/auth/google/callback',
         failureRedirect: '/api/login/:code' 
         
 }));
-console.log("passport.profile: " );
+console.log("passport.profile: " + passport.profile  );
 };
-
-
-// Uses the JavaScript client library.
-
-// This sample assumes a client object has been created.
-// To learn more about creating a client, check out the starter:
-//  https://developers.google.com/+/quickstart/javascript
-// var request = gapi.client.plus.people.get({
-//   'userId' : 'me'
-// });
-
-// request.execute(function(resp) {
-//   console.log('ID: ' + resp.id);
-//   console.log('Display Name: ' + resp.displayName);
-//   console.log('Image URL: ' + resp.image.url);
-//   console.log('Profile URL: ' + resp.url);
-// });

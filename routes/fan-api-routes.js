@@ -30,7 +30,7 @@ module.exports = function(app) {
         auth_id: req.body.authi_id,
         name: req.body.name,
         email: localStorage.email,
-        pic_url: "/assets/images/Ghost.jpg",
+        pic_url: "/assets/images/users/Ghost.jpg",
         locale: req.body.locale,
       })
       .then(function(data) {
