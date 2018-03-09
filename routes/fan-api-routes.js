@@ -30,7 +30,7 @@ module.exports = function(app) {
         auth_id: req.body.authi_id,
         name: req.body.name,
         email: localStorage.email,
-        pic_url: req.body.pic_url,
+        pic_url: "/assets/images/Ghost.jpg",
         locale: req.body.locale,
       })
       .then(function(data) {
@@ -65,5 +65,9 @@ module.exports = function(app) {
       .then(function(data) {
         window.location.replace("/");
       });
+  });
+
+  app.get("/api/create/fan", function(req, res) {
+    res.render("fanCreate");
   });
 };

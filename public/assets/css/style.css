@@ -6,8 +6,9 @@
 }
  body {
  	background-color: black;
- 	color:blue;
- 	
+ 	color: gold;
+ 	height: 100%;
+ 	margin: 0;
  }
 
 footer {
@@ -25,10 +26,24 @@ footer {
 }
 
 .container {
-	
+	min-height: 100%;
 }
+
+form {
+	background-color: gray;
+}
+
+label {
+	padding: 5px;
+}
+
+.form-group {
+	padding: 5px;
+}
+
 
 .profImg {
 	width: 300px;
 	height: 225px;
 }
+

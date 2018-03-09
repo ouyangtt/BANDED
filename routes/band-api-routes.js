@@ -73,5 +73,9 @@ module.exports = function(app) {
           res.render("index", hbsObject);
         });
   });
+
+  app.get("/api/create/band", function(req, res) {
+    res.render("bandCreate");
+  });
 };
 
