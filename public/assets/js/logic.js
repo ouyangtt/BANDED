@@ -1,4 +1,4 @@
-// var passport = require("passport.js");
+var passport = require("passport.js");
 
 $(document).ready(function() {
 
@@ -18,8 +18,8 @@ $(document).ready(function() {
   $("#fanSubmit").on("click", function(event) {
     event.preventDefault();
     var newFan = {
-      auth_id: passport.profile.id,
-      email: passport.profile.emails[0].value,
+      auth_id: "89jd89f", ///profile.id,
+      email: "piurew804ru", ///profile.emails[0].value,
       name: $("#name").val().trim(),
       locale: $("#locale").val().trim()
     };
@@ -38,8 +38,8 @@ $(document).ready(function() {
 $("#bandSubmit").on("click", function(event) {
   event.preventDefault();
   var newBand = {
-    auth_id: passport.profile.id,
-    email: passport.profile.emails[0].value,
+    auth_id: "89jd89f",
+    email: "piurew804ru",
     name: $("#name").val().trim(),
     bio: $("#bio").val(),
     twitter: $("#twitter").val().trim(),
