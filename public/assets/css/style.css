@@ -1,12 +1,11 @@
-
- 
 #logo {
-	margin-top:50px;
+	margin-top:30px;
 	margin-bottom:30px;
 }
+
  body {
  	background-color: black;
- 	color: gold;
+ 	color:rgb(240, 240, 247);
  	height: 100%;
  	margin: 0;
  }
@@ -14,18 +13,16 @@
 footer {
 	text-align: center;
 	color:white;
-<<<<<<< HEAD
-=======
-	
+
 	position: relative;
 	padding: 1rem;
 	right: 0;
 	bottom: 0;
 	left: 0;
->>>>>>> eaed9dd8b8d201e2a0f10f58ed1fe754cb11d755
 }
 
 .container {
+	text-align: center;
 	min-height: 100%;
 }
 
@@ -45,5 +42,10 @@ label {
 .profImg {
 	width: 300px;
 	height: 225px;
+}
+
+
+h1 {
+	margin-bottom: 50px;
 }
 
