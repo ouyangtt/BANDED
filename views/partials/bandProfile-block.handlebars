@@ -3,7 +3,7 @@
     <div class="row">
       <img class="profImg" src="{{band.pic_url}}">
     </div>
-
+{{!-- 
     <form ref='uploadForm' 
       id='uploadForm' 
       action='/api/upload/band/:' + {{band.id}} 
@@ -11,7 +11,7 @@
       encType="multipart/form-data">
         <input type="file" name="profileImg" />
         <input type='submit' value='Upload!' />
-    </form>
+    </form> --}}
 
     <div class="row">
       <p>Location: {{band.locale}}</p>
@@ -20,15 +20,18 @@
   </div>
   <div class="col-4">
     <div class="row">
-      {{band.name}}
+     <h3> {{band.name}}</h3>
     </div>
     <div class="row">
       {{band.bio}}
     </div>
   </div>
-  <div class="col-3 offset-1">
-    {{band.twitter}}
-  </div>
+  <div class="col-3">
+  <p>{{band.twitter}}</p> 
+  <p>{{band.facebook}}</p>   
+  <p>{{band.instagram}}</p>   
+  <p>{{band.bandcamp}}</p>  
+  
 </div>
 
 <div class="row">
@@ -38,3 +41,5 @@
 <div class="row">
   {{!-- streaming video --}}
 </div>
+
+

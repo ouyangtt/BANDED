@@ -33,10 +33,6 @@ INSERT INTO login(auth_id,is_band,u_id) VALUES ("789af8uasf76dds",0,2);
 INSERT INTO login(auth_id,is_band,u_id) VALUES ("78976ddssf07gfa",1,10);
 INSERT INTO login(auth_id,is_band,u_id) VALUES ("789897f79vc7gfa",0,6);
 
-
-
-c
-
 INSERT INTO music_genres(g_id,b_id) VALUES (6,10);
 INSERT INTO music_genres(g_id,b_id) VALUES (7,8);
 INSERT INTO music_genres(g_id,b_id) VALUES (5,1);
@@ -67,7 +63,7 @@ INSERT INTO soc_media(sm_name, sm_url, b_id) VALUES ("youtube", "https://www.you
 
 
 
-INSERT INTO bands(name,auth_id,email,pic_url,bio,twitter,facebook,instagram,bandcamp,channel_id,locale,createdAt,updatedAt) VALUES ("Rival Schools","1", "thedude@gmail.com","/assets/images/Ghost.jpg","Rival Schools are a post-hardcore band from New York City.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/","UCdUdP5BeOsua_j3u-0ZbL5w",10001,'1970-01-01 00:00:01.000000','1970-01-01 00:00:01.000000');
+INSERT INTO bands(name,auth_id,email,pic_url,bio,twitter,facebook,instagram,bandcamp,channel_id,locale,createdAt,updatedAt) VALUES ("Rival Schools","1", "thedude@gmail.com","/assets/images/rivalschools.jpg","Rival Schools are a post-hardcore band from New York City signed to Photo Finish Records, featuring Walter Schreifels on vocals and guitar; Ian Love on guitar; Cache Tolman on bass guitar; and Sam Siegler on drums.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/","UCdUdP5BeOsua_j3u-0ZbL5w",10001,'1970-01-01 00:00:01.000000','1970-01-01 00:00:01.000000');
 INSERT INTO bands(name,auth_id,email,pic_url,bio,twitter,facebook,instagram,bandcamp,channel_id,locale,createdAt,updatedAt) VALUES ("Ghost","thedude@gmail.com","4","jiou24ur""/assets/images/Ghost.jpg","Ghost is a Swedish heavy metal band that was formed in Linköping, Sweden in 2006. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/","UCwTcFaOYFjIbxHjrmP0ptxw",10001,'1970-01-01 00:00:01.000000','1970-01-01 00:00:01.000000');
 INSERT INTO bands(name,auth_id,email,pic_url,bio,twitter,facebook,instagram,bandcamp,channel_id,locale,createdAt,updatedAt) VALUES ("Turbonegro","thedude@gmail.com","3","/assets/images/Ghost.jpg","Turbonegro is a Norwegian punk rock band, initially active from 1989 to 1998, then reformed in 2002. ","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/","UCwTcFaOYFjIbxHjrmP0ptxw",94602,'1970-01-01 00:00:01.000000','1970-01-01 00:00:01.000000');
 INSERT INTO bands(name,auth_id,email,pic_url,bio,twitter,facebook,instagram,bandcamp,channel_id,locale,createdAt,updatedAt) VALUES ("Hot Snakes","thedude@gmail.com","5","/assets/images/Ghost.jpg","Hot Snakes are an American post-hardcore band led by Rick Froberg and John Reis.","https://twitter.com/","https://www.facebook.com/","https://www.instagram.com/","https://www.youtube.com/","UCwTcFaOYFjIbxHjrmP0ptxw",94607,'1970-01-01 00:00:01.000000','1970-01-01 00:00:01.000000');
