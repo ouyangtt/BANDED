@@ -1,27 +1,27 @@
 <div class="row">
   <div class="col-4">
     <div class="row">
-      <img href="{{fans.fan_pic_url}}">
+      <img href="{{fan.pic_url}}">
     </div>
 
     <div class="row">
-      <p>Location: {{fans.f_locale}}</p>
+      <p>Location: {{fan.locale}}</p>
     </div>
   </div>
 
   <div class="col-4">
     <div class="row">
-      {{fans.fan_name}}
+      {{fan.name}}
     </div>
 
     <div class="row border border-black">
-      {{fans.fan_email}}
+      {{fan.email}}
     </div> 
   </div>
 
   <div class="col-4">
     <div class="row">
-      {{<script type="text/javascript">
+      {{!-- <script type="text/javascript">
       // Client ID and API key from the Developer Console
       var CLIENT_ID = '823260742909-spgbua9h5jj952ojh0odj1ndrjvvqk2l.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyDjpyRvgq2o9aP8lt1w5xVSUZrjCI1bgbk';
@@ -138,10 +138,10 @@
       }
     </script>}}
     </div>
-  </div>
+  </div> --}}
 </div>
 
-<div class="row">
+{{!-- <div class="row">
   <div class="col-4">
     {{events.event_name}}
   </div>
@@ -153,4 +153,4 @@
   <div class="col-4">
     {{events.event_channel_id}}
   </div>
-</div>
+</div> --}}

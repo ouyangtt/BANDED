@@ -7,15 +7,24 @@
  body {
  	background-color: black;
  	color:blue;
-
+ 	
  }
 
 footer {
 	text-align: center;
 	color:white;
+<<<<<<< HEAD
+=======
+	
+	position: relative;
+	padding: 1rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+>>>>>>> eaed9dd8b8d201e2a0f10f58ed1fe754cb11d755
 }
 
 .container {
-	height:800px;
+	
 }
 

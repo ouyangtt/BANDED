@@ -3,9 +3,11 @@ var db = require("../models");
 module.exports = function(app) {
 	app.get("/api/band/", function(req, res) {
     db.Band.findAll({}).then(function(data) {
+      console.log("data: " + data);
       var hbsObject = {
         bands: data
       };
+
         res.render("index", hbsObject);
       });
   });
@@ -13,10 +15,11 @@ module.exports = function(app) {
 	app.get("/api/band/:id", function(req, res) {
     db.Band.findOne({
         where: {
-          name: req.params.name
+          id: req.params.id
         }
       })
       .then(function(data) {
+        console.log("data: " + data);
         var hbsObject = {
           band: data
         };
@@ -30,7 +33,7 @@ module.exports = function(app) {
         auth_id: req.body.auth_id,
         email: req.body.email, 
         name: req.body.name,
-        pic_url: req.body.pic_url,
+        pic_url: "/assets/images/Ghost.jpg",
         bio: req.body.bio,
         twitter: req.body.twitter,
         facebook: req.body.facebook,
@@ -39,6 +42,7 @@ module.exports = function(app) {
         locale: req.body.locale,
       })
       .then(function(data) {
+        console.log("data: "+ data)
         if(data){
           window.location.redirect("api/login/:" + data.auth_id);
         }

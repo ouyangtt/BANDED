@@ -36,12 +36,12 @@ module.exports = function(sequelize, DataTypes){
         Fan.belongsToMany(models.Band, {
             through: "FanBand"   
         });
-        Fan.belongsToMany(models.Genre, {
-            through: "FanGenre"  
-        });
-        Fan.belongsToMany(models.Event, {
-            through:"FanEvent"  
-        });
+        // Fan.belongsToMany(models.Genre, {
+        //     through: "FanGenre"  
+        // });
+        // Fan.belongsToMany(models.Event, {
+        //     through:"FanEvent"  
+        // });
         
     
     }
