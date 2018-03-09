@@ -4,6 +4,8 @@ var path = require("path");
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
+// var profile = require("/assets/js/passport.js");
+
 
 module.exports = function(app) {
 	app.get("/api/login/", function(req, res) {
@@ -68,16 +70,21 @@ module.exports = function(app) {
 
  // Each of the below routes just handles the HTML page that the user gets sent to.
 
-// passport.use(new GoogleStrategy({}, passport.serializeUser(function(user, done){})
+// passport.use(new GoogleStrategy({}, passport.serializeUser(function(user, done){})));
 
-// passport.deserializeUser(function(id, done) { })
+// passport.deserializeUser(function(id, done) { });
 
-// function(token, refreshToken, profile, done) { })
+// function(token, refreshToken, profile, done) { };
+
+////////////////////////////////////////////////////
+// GEt keys to the kingdom
+/////////////////////////////////////////////////
+
 
 var loc_id;
 require('../public/assets/js/passport.js')(passport);
 
-app.get('/auth/google', passport.authenticate('google', { scope : ['profile','email']  }));
+app.get('/auth/google', passport.authenticate('google', { scope : ['https://www.googleapis.com/auth/plus.login','email']  }));
 
     // the callback after google has authenticated the user
 app.get( '/auth/google/callback', 
@@ -87,5 +94,22 @@ app.get( '/auth/google/callback',
         failureRedirect: '/api/login/:code' 
         
 }));
-console.log("profile: " + passport.profile);
+console.log("passport.profile: " );
 };
+
+
+// Uses the JavaScript client library.
+
+// This sample assumes a client object has been created.
+// To learn more about creating a client, check out the starter:
+//  https://developers.google.com/+/quickstart/javascript
+// var request = gapi.client.plus.people.get({
+//   'userId' : 'me'
+// });
+
+// request.execute(function(resp) {
+//   console.log('ID: ' + resp.id);
+//   console.log('Display Name: ' + resp.displayName);
+//   console.log('Image URL: ' + resp.image.url);
+//   console.log('Profile URL: ' + resp.url);
+// });

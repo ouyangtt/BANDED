@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-3">
+  <div class="col-4">
     <div class="row">
-      <img href="{{bands.pic_url}}">
+      <img class="profImg" src="{{band.pic_url}}">
     </div>
 
     <form ref='uploadForm' 
       id='uploadForm' 
-      action='/api/upload/band/:' + {{bands.id}} 
+      action='/api/upload/band/:' + {{band.id}} 
       method='post' 
       encType="multipart/form-data">
         <input type="file" name="profileImg" />
@@ -14,22 +14,20 @@
     </form>
 
     <div class="row">
-      <p>Location: {{bands.locale}}</p>
+      <p>Location: {{band.locale}}</p>
+    </div>
+    
+  </div>
+  <div class="col-4">
+    <div class="row">
+      {{band.name}}
     </div>
     <div class="row">
-      {{!-- <p>Genre: {{bands.genres}}</p> --}}
+      {{band.bio}}
     </div>
   </div>
-  <div class="col-6">
-    <div class="row">
-      {{bands.name}}
-    </div>
-    <div class="row border border-black">
-      {{bands.bio}}
-    </div>
-  </div>
-  <div class="col-3">
-    {{bands.twitter}}
+  <div class="col-3 offset-1">
+    {{band.twitter}}
   </div>
 </div>
 
