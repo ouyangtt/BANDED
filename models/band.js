@@ -37,6 +37,10 @@ module.exports = function(sequelize, DataTypes){
         bandcamp: {
             allowNull: true,
             type: DataTypes.STRING
+        },
+        channel_id: {
+            allowNull:true,
+            type: DataTypes.STRING
         }, 
         locale: {
             allowNull: false,
