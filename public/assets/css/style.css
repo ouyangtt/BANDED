@@ -8,6 +8,7 @@
  	color:rgb(240, 240, 247);
  	height: 100%;
  	margin: 0;
+ 	background-repeat: no-repeat;
  }
 
 footer {
@@ -27,15 +28,21 @@ footer {
 }
 
 form {
-	background-color: gray;
+	background-color: rgba(0,0,0,0);
+	opacity: 0.5;
+
 }
 
 label {
-	padding: 5px;
+	
+	color: rgba(255,255,255,1);
+	font-size: 36;
+	font-weight: bold;
+
 }
 
-.form-group {
-	padding: 5px;
+
+
 }
 
 
@@ -47,5 +54,9 @@ label {
 
 h1 {
 	margin-bottom: 50px;
+	color: gray;
 }
+
+
+
 
