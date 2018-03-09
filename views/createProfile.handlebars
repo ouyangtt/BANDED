@@ -1,47 +1,13 @@
-<form
-  ref='uploadForm' 
-  id='uploadForm' 
-  action='assets/images/logo.png'
-  method='post' 
-  encType="multipart/form-data">
-  <div class="form-group">
-    <label for="name">Username: </label>
-    <input type="text" class="form-control" id="name" placeholder="username">
+
+<div class="row">
+  <h1>Are you a Band or a Fan?</h1>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <button type="submit" class="btn btn-primary" id="bandBtn">Band</button>
   </div>
-  <div class="form-group">
-    <label for="name">Location: </label>
-    <input type="text" class="form-control" id="locale" placeholder="Oakland, CA">
+  <div class="col-3">
+    <button type="submit" class="btn btn-primary" id="fanBtn">Fan</button>
   </div>
-  <div class="form-group">
-    <label for="bandorfan">Are you a Band or Fan?</label>
-    <select class="form-control" id="bandOrFan">
-      <option value="fan">Fan</option>
-      <option value="band">Band</option>
-    </select>
-  </div>
-  <div class="form-group" id="bandForm">
-    <label for="name">Genre: </label>
-    <input type="text" class="form-control" id="name" placeholder="username">
-  </div>
-  <div class="form-group" id="bandForm">
-    <label for="name">Twitter: </label>
-    <input type="url" class="form-control" id="twitter" placeholder="https://twitter.com/twitter_account">
-  </div>
-  <div class="form-group" id="bandForm">
-    <label for="name">Facebook: </label>
-    <input type="url" class="form-control" id="facebook" placeholder="https://facebook.com/facebook_account">
-  </div>
-  <div class="form-group" id="bandForm">
-    <label for="name">Instagram: </label>
-    <input type="url" class="form-control" id="instagram" placeholder="https://www.instagram.com/insta_account">
-  </div>
-  <div class="form-group" id="bandForm">
-    <label for="name">Bandcamp: </label>
-    <input type="url" class="form-control" id="bandcamp" placeholder="https://my_band_name.bandcamp.com/">
-  </div>
-  <div class="form-group" id="bandForm">
-    <label for="bio">Bio: </label>
-    <textarea class="form-control" id="bio" rows="3"></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary" id="profSubmit">Submit Profile</button>
-</form>
+</div>
