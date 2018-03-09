@@ -84,7 +84,7 @@ module.exports = function(app) {
 // var loc_id;
 require('../public/assets/js/passport.js')(passport);
 
-app.get('/auth/google', passport.authenticate('google', { scope : ['https://www.googleapis.com/plus/v1/people/me','email']  }));
+app.get('/auth/google', passport.authenticate('google', { scope : ['profile','email']  }));
 
     // the callback after google has authenticated the user
 app.get( '/auth/google/callback', 
