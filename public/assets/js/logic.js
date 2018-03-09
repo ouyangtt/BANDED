@@ -15,7 +15,7 @@ $(document).ready(function() {
   });
 
   // When user clicks submit button send post to DB to save profile
-  ("#fanSubmit").on("click", function(event) {
+  $("#fanSubmit").on("click", function(event) {
     event.preventDefault();
     var newFan = {
       auth_id: passport.profile.id,
