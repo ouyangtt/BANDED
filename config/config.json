@@ -3,6 +3,7 @@
     "username": "root",
    "password": "rUWKttvA#VIuowOTbqbOUp*H8vEYRwp9I",
    "database": "banded_db",
+
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
