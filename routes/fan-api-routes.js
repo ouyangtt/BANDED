@@ -66,4 +66,8 @@ module.exports = function(app) {
         window.location.replace("/");
       });
   });
+
+  app.get("/api/create/fan", function(req, res) {
+    res.render("fanCreate");
+  });
 };
