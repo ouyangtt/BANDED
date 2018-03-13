@@ -1,5 +1,8 @@
 # BANDED
 A Place for bands to bring fans into their lives.
+Our motivation was to connect bands and their fans, by allowing artists to stream live video of their creative processes or impromptu performances directly to their fans. This is the place for bands to show their stories of behind the scenes.
+This would strengthen the sense of community for the fans as well as provide the artist with a chance to promote future album releases or live shows.
+
 
 ## LINK
 [BANDED](https://banded.herokuapp.com/ "BANDED")
