@@ -24,7 +24,7 @@ This would strengthen the sense of community for the fans as well as provide the
     
     * Depending on the choice, they will be given a form to fill out and create a BANDED profile.
     
-    ![image showing heroku deployment](public/assets/heroku_readme.jpg "Heroku")
+   
 
 ## BANDS
   * Create a live video stream.
