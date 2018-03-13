@@ -8,7 +8,7 @@ A Place for bands to bring fans into their lives.
   * Visit link above.
   * Click the login with Google button to link your Google account to BANDED. This will ask for access to your YouTube account as well as     your Google Calander.
   
-  ![image showing heroku deployment](public/assets/heroku_readme.jpg "Heroku")
+  ![image showing heroku deployment](public/assets/images/login.png)
   
   * If the user is already a member, they will be taken to their profile page.
   
