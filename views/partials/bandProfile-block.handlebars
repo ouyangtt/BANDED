@@ -14,11 +14,11 @@
     </form> --}}
 
     <div class="row">
-      <p>Location: {{band.locale}}</p>
+      <h4><p>Location: {{band.locale}}</p></h4>
     </div>
     
   </div>
-  <div class="col-4">
+  <div class="col-4 text-left">
     <div class="row">
      <h3> {{band.name}}</h3>
     </div>
@@ -26,20 +26,22 @@
       {{band.bio}}
     </div>
   </div>
-  <div class="col-3">
-  <p>{{band.twitter}}</p> 
-  <p>{{band.facebook}}</p>   
-  <p>{{band.instagram}}</p>   
-  <p>{{band.bandcamp}}</p>  
-  
+  <div class="col-3 text-left">
+  <ul style="list-style: none">
+  <br>  
+  <li>{{band.twitter}}</li>
+  <li>{{band.facebook}}</li>   
+  <li>{{band.instagram}}</li>   
+  <li>{{band.bandcamp}}</li>  
+  </ul>
 </div>
 
 <div class="row">
   {{!-- List of upcoming events --}}
 </div>
 
-<div class="row">
+<div class="row mx-auto">
   {{!-- streaming video --}}
-</div>
+<iframe width="700" height="450" src="https://www.youtube.com/embed/fOcthn0jY7g?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
 
