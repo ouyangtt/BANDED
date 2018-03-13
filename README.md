@@ -20,7 +20,7 @@ This would strengthen the sense of community for the fans as well as provide the
   * IF the user is not already in the BANDED database, they will be brought to the "create profile" page.
     * The user will be asked whether they are a fan or a band.
     
-    ![image showing heroku deployment](public/assets/images/banded_form.PNG)
+  ![image showing heroku deployment](public/assets/images/banded_form.PNG)
     
     * Depending on the choice, they will be given a form to fill out and create a BANDED profile.
     
