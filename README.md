@@ -31,3 +31,8 @@ This would strengthen the sense of community for the fans as well as provide the
     * This will create a YouTube live broadcast event for the upcoming video stream
     * Each fan who is listening to this band will be notified of the upcoming stream.
   * Stream a live band practice, song writing session, or intimate "livingroom show" to your fans.
+
+## FANS
+  * Search for bands by name or by genre
+  * Once a fan follows a band they will receive invitations to live events created by the band.
+  * Fans can specify whether they will be attending an event and will receive future notifications about followed events. 
