@@ -12,12 +12,12 @@ A Place for bands to bring fans into their lives.
   
   * If the user is already a member, they will be taken to their profile page.
   
-  ![image showing heroku deployment](public/assets/heroku_readme.jpg "Heroku")
+  ![image showing heroku deployment](public/assets/images/banded.png)
   
   * IF the user is not already in the BANDED database, they will be brought to the "create profile" page.
     * The user will be asked whether they are a fan or a band.
     
-    ![image showing heroku deployment](public/assets/heroku_readme.jpg "Heroku")
+    ![image showing heroku deployment](public/assets/images/banded_form.png)
     
     * Depending on the choice, they will be given a form to fill out and create a BANDED profile.
     
